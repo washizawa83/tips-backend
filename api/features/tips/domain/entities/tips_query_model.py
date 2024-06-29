@@ -1,5 +1,6 @@
 import typing
 from datetime import datetime
+import uuid
 
 from pydantic import Field
 
@@ -15,7 +16,7 @@ class TipsReadModel(TipsBaseModel):
     created_at: datetime
 
     class Config(object):
-        orm_mode = True
+        from_attributes = True
 
     @classmethod
     def from_entity(cls, entity: TipsEntity) -> 'TipsReadModel':

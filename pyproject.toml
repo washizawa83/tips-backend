@@ -12,6 +12,7 @@ uvicorn = {extras = ["standard"], version = "^0.30.1"}
 sqlalchemy = "^2.0.31"
 aiomysql = "^0.2.0"
 sqlalchemy-utils = "^0.41.2"
+pymysql = "^1.1.1"
 
 
 [build-system]

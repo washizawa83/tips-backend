@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from api.controller import tips
+from api.features.tips.presentaation.controller import tips
 
 
 app = FastAPI()

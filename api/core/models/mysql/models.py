@@ -9,12 +9,12 @@ from sqlalchemy.sql import func
 
 @as_declarative()
 class Base(object):
-    id: UUIDType = Column('id', UUIDType(binary=False),
-                          primary_key=True, default=uuid.uuid4)
-    updated_at: Mapped[datetime] | datetime = Column(
+    id = Column('id', UUIDType(binary=False),
+                primary_key=True, default=uuid.uuid4)
+    updated_at = Column(
         TIMESTAMP,
         server_default=func.now(),
         onupdate=func.current_timestamp()
     )
-    created_at: Mapped[datetime] | datetime = Column(
+    created_at = Column(
         TIMESTAMP, server_default=func.now())
