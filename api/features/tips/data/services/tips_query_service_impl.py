@@ -3,7 +3,7 @@ from typing import Sequence, Optional
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from api.features.tips.data.models.tables import Tip, Tag, User
+from api.features.tips.data.models.tables import Tip, Tag
 from api.features.tips.domain.entities.tips_query_model import TipsReadModel
 from api.features.tips.domain.services.tips_query_service import TipsQueryService
 
